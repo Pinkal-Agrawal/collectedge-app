@@ -1,0 +1,64 @@
+/* ============ LOGO STRIP ============ */
+.logo-strip {
+  padding: 40px 0 56px;
+  text-align: center;
+}
+
+.logo-strip__tagline {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
+}
+
+.logo-strip__tagline strong {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.logo-strip__wrapper {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.logo-strip__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+.logo-item {
+  padding: 0 32px;
+  flex-shrink: 0;
+  opacity: 0.65;
+  transition: opacity var(--transition-fast);
+  display: flex;
+  align-items: center;
+}
+
+.logo-item:hover {
+  opacity: 1;
+}
+
+.logo-text {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.logo-flex {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-blue    { color: #1D4ED8; }
+.logo-primary { color: var(--color-primary); }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

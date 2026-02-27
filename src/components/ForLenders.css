@@ -1,0 +1,289 @@
+/* ============ FOR LENDERS ============ */
+.for-lenders {
+  padding: 80px 24px;
+}
+
+.for-lenders__container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.for-lenders__header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* ── Grid ── */
+.lenders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ── Card ── */
+.lenders-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  overflow: hidden;
+}
+
+.lenders-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.12);
+}
+
+.lenders-card__icon-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.lenders-card__icon {
+  width: 34px;
+  height: 34px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lenders-card__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.lenders-card__title-blue {
+  color: var(--color-primary);
+}
+
+.lenders-card__desc {
+  font-size: 13.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  max-width: 380px;
+}
+
+/* ── Mockup wrapper ── */
+.lenders-card__mockup {
+  background: rgba(248, 250, 255, 0.7);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  overflow: hidden;
+}
+
+/* Agents */
+.lenders-card__mockup--agents {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.agent-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.agent-row__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.agent-row__name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  display: block;
+}
+
+.agent-row__location {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  display: block;
+}
+
+.agent-strip {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 4px 2px 0;
+}
+
+.agent-strip__img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  margin-left: -8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.agent-strip__img:first-child {
+  margin-left: 0;
+}
+
+/* API diagram */
+.lenders-card__mockup--api {
+  height: 220px;
+  position: relative;
+}
+
+.api-diagram {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.api-diagram__lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.api-node {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}
+
+.api-node--source {
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.api-node--hub {
+  width: 56px;
+  height: 56px;
+  background: var(--color-primary);
+  left: 45%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.api-node--right {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 1px solid var(--color-border);
+  right: 28px;
+}
+
+.api-node--rt  { top: 28%; transform: translateY(-50%); }
+.api-node--rm  { top: 50%; transform: translateY(-50%); }
+.api-node--rb  { top: 74%; transform: translateY(-50%); }
+
+.api-badge {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+  white-space: nowrap;
+}
+
+/* Chart */
+.lenders-card__mockup--chart {
+  padding: 14px;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.lenders-card__chart-img {
+  flex: 1;
+  border-radius: var(--radius-md);
+  max-height: 170px;
+  object-fit: cover;
+}
+
+.lenders-card__chart-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.health-mini {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.health-mini__text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  line-height: 1.2;
+  bottom: 6px;
+}
+
+.health-mini__text strong {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.add-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: white;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* AFL */
+.lenders-card__mockup--afl {
+  padding: 14px;
+}
+
+.lenders-card__afl-img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  max-height: 180px;
+  object-fit: cover;
+  object-position: top;
+}
